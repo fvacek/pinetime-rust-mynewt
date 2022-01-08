@@ -95,7 +95,7 @@ fn send_sensor_data(val: &SensorValue) -> MynewtResult<()>  {  //  Returns an er
 
     //  Compose the CoAP Payload using the coap!() macro.
     //  Select @json or @cbor To encode CoAP Payload in JSON or CBOR format.
-    let _payload = coap!( @json {        
+    let _payload = coap!( @cbor {        
         //  Create `values` as an array of items under the root.
         //  Assume `val` contains `key: "t", val: 2870, geo: { lat, long }`. 
         //  Append to the `values` array the Sensor Key, Value and optional Geolocation:
